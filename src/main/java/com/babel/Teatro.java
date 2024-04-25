@@ -21,9 +21,9 @@ public class Teatro {
     }
 
     public void mostrarEstadoButacas() {
-        for (Butaca[] filaButacas : butacas) {
-            for (Butaca butaca : filaButacas) {
-                if (butaca.isOcupado()) {
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                if (butacas[i][j].isOcupado()) {
                     System.out.print("[X]");
                 } else {
                     System.out.print("[ ]");
@@ -61,11 +61,11 @@ public class Teatro {
     }
 
     public void pintarButacas(Butaca[] butacas) {
-        for (Butaca butaca : butacas) {
-            if (butaca.isOcupado()) {
+        for (int i = 0; i < butacas.length; i++) {
+            if (butacas[i].isOcupado()) {
                 System.out.println("¡Error! La butaca ya está ocupada.");
             } else {
-                butaca.setOcupado(true);
+                butacas[i].setOcupado(true);
             }
         }
     }
